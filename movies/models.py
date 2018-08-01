@@ -9,6 +9,8 @@ class Movie(models.Model):
     language = models.CharField(max_length=100)
     movie_type = models.CharField(max_length=100)
     movie_image = models.ImageField(upload_to='movie_image')
+    def __str__(self):
+        return self.movie_title
 
 
 class Actor(models.Model):
@@ -19,3 +21,5 @@ class Actor(models.Model):
     nationality = models.CharField(max_length=100)
     up_votes = models.IntegerField(default=0)
     actor_image = models.ImageField(upload_to='actor_image')
+    def __str__(self):
+        return self.actor_name
