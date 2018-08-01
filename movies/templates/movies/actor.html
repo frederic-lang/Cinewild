@@ -1,0 +1,18 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+
+<h1>{{ actor.actor_name }}</h1>
+<p> Nationality : {{ actor.nationality }} </p>
+<h3> Movies : </h3>
+<ul>
+{% for movie in actor.movie_set.all %}
+    <li>{{ movie.movie_title }}</li>
+{% endfor %}
+</ul>
+
+<div id="panel">
+<img src="{{ actor.actor_image.url }}" alt="Actor Image" />
+</div>
+
+{% endblock content %}

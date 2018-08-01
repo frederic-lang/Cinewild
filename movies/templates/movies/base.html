@@ -21,7 +21,7 @@
                 <ul>
                         <li><a href="{% url 'movies:home' %}">Home</a></li>
                         <li><a href="{% url 'movies:index' %}">Index</a></li>
-                        <li><a href="/About/">About</a></li>
+                        <li><a href="{% url 'movies:about' %}">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,10 +30,6 @@
         {% block content %}
             <div id="text">
             <p> Welcome to Cinewild</p>
-            </div>
-
-            <div id="panel">
-                <img src="/static/img/atomic_fractal.jpg" alt="Image de Fractale" />
             </div>
         {% endblock %}
     </section>

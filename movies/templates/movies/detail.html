@@ -3,10 +3,16 @@
 {% block content %}
 
 <h1>{{ movie.movie_title }}</h1>
+<p> Movie language : {{ movie.language }} </p>
+<h3> Actors : </h3>
 <ul>
 {% for actor in movie.actor_set.all %}
-    <li>{{ actor.actor_name }}</li>
+    <li><a href= "{% url 'movies:actor' actor.id %}" >{{ actor.actor_name }} </a></li>
 {% endfor %}
 </ul>
+
+<div id="panel">
+<img src="{{ movie.movie_image.url }}" alt="Movie Image" />
+</div>
 
 {% endblock content %}

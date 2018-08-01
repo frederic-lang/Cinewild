@@ -10,6 +10,9 @@ from .models import Movie, Actor
 def home(request):
     return render(request, 'movies/base.html')
 
+def about(request):
+    return render(request, 'movies/about.html')
+
 def index(request):
     latest_movie_list = Movie.objects.order_by('-pub_date')[:5]
     context = {
@@ -20,6 +23,10 @@ def index(request):
 def detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     return render(request, 'movies/detail.html', {'movie':movie})
+
+def actor(request, actor_id):
+    actor = get_object_or_404(Actor, pk=actor_id)
+    return render(request, 'movies/actor.html', {'actor':actor})
 
 def actors(request, movie_id):
     response = "You're looking at the actors of movie %s."
