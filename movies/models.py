@@ -7,6 +7,7 @@ class Movie(models.Model):
     pub_date = models.DateTimeField('date published', auto_now_add=True)
     date_of_movie = models.DateField()
     language = models.CharField(max_length=100)
+    up_votes = models.IntegerField(default=0)
     movie_type = models.CharField(max_length=100)
     movie_image = models.ImageField(upload_to='movie_image')
     def __str__(self):

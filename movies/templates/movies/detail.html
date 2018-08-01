@@ -1,0 +1,12 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+
+<h1>{{ movie.movie_title }}</h1>
+<ul>
+{% for actor in movie.actor_set.all %}
+    <li>{{ actor.actor_name }}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href= "{% static 'movies/style.css' %}"/>
+    <title>{% block title %}CineWild{% endblock %}</title>
+</head>
+
+<body>
+        <header>
+            <h1>CINEWILD</h1>
+            {% if user.is_authenticated %}
+            <h2>Hi {{ user.username }}</h2>
+            {% else %}
+            <h2> <a href="/accounts/login/">Log in</a> or <a href="/accounts/register/">Sign in</a> </h2>
+            {% endif %}
+            
+            
+            <nav>
+                <ul>
+                        <li><a href="{% url 'movies:home' %}">Home</a></li>
+                        <li><a href="{% url 'movies:index' %}">Index</a></li>
+                        <li><a href="/About/">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <section id="content">
+        {% block content %}
+            <div id="text">
+            <p> Welcome to Cinewild</p>
+            </div>
+
+            <div id="panel">
+                <img src="/static/img/atomic_fractal.jpg" alt="Image de Fractale" />
+            </div>
+        {% endblock %}
+    </section>
+
+</body>
+</html>

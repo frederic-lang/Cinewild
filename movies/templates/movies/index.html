@@ -1,0 +1,15 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+
+{% if latest_movie_list %}
+    <ul>
+    {% for movie in latest_movie_list %}
+        <li><a href="{% url 'movies:detail' movie.id %}">{{ movie.movie_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Movie are available.</p>
+{% endif %}
+
+{% endblock content %}
