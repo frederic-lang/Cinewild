@@ -4,6 +4,7 @@
 
 <h1>{{ movie.movie_title }}</h1>
 <p> Movie language : {{ movie.language }} </p>
+<p> Release date : {{ movie.date_of_movie|date:"l F j, Y" }}. </p>
 <h3> Actors : </h3>
 <ul>
 {% for actor in movie.actor_set.all %}
