@@ -48,7 +48,7 @@ def vote(request):
         return HttpResponseRedirect(reverse('movies:results'))
 
 def results(request):
-    movie_list = Movie.objects.all()
+    movie_list = Movie.objects.order_by('-up_votes')
     return render(request, 'movies/results.html', {'movie_list':movie_list})
 
 
