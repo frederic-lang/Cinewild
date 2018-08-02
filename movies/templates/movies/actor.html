@@ -7,7 +7,7 @@
 <p> Born {{ actor.date_of_birth|date:"l F j, Y" }}. </p>
 <h3> Movies : </h3>
 <ul>
-{% for movie in actor.movie_set.all %}
+{% for movie in actor.movie.all %}
     <li>{{ movie.movie_title }}</li>
 {% endfor %}
 </ul>
