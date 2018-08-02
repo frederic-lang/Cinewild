@@ -1,0 +1,21 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+
+<h2>Choose your favorite movie</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'movies:vote' %}" method="post">
+{% csrf_token %}
+
+{% for movie in movie_list %}
+<input type="radio" name="movie" id="movie{{ forloop.counter }}" value="{{ movie.id }}">
+<label for="movie{{ forloop.counter }}">{{ movie.movie_title }}</label><br>
+{% endfor %}
+<input type="submit" value="Choose">
+</form>
+
+
+
+{% endblock content %}

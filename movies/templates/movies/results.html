@@ -1,0 +1,15 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+
+<h1>Upvotes of movies :</h1>
+
+<ul>
+{% for movie in movie_list %}
+    <li>{{ movie.movie_title }} -- {{ movie.up_votes }} up_vote{{ movie.up_votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'movies:choose_movie' %}">Choose again?</a>
+
+{% endblock content %}

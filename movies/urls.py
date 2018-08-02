@@ -10,8 +10,8 @@ urlpatterns = [
     # ex: /movie/5/
     path('<int:movie_id>/', views.detail, name='detail'),
     path('actor/<int:actor_id>/', views.actor, name='actor'),
-    # ex: /movie/5/actors/
-    path('<int:movie_id>/actors/', views.actors, name='actors'),
     # ex: /movie/5/vote/
-    path('<int:movie_id>/vote/', views.vote, name='vote'),
+    path('vote/', views.vote, name='vote'),
+    path('choose_movie/', views.choose_movie, name='choose_movie'),
+    path('results/', views.results, name='results'),
 ]

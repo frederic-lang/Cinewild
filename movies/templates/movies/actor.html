@@ -8,7 +8,7 @@
 <h3> Movies : </h3>
 <ul>
 {% for movie in actor.movie.all %}
-    <li>{{ movie.movie_title }}</li>
+    <li><a href="{% url 'movies:detail' movie.id %}"> {{ movie.movie_title }}</a></li>
 {% endfor %}
 </ul>
 
