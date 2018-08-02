@@ -12,8 +12,8 @@ All your favorites movies in one app !
 | Django  |   2.1   | 
 | Pillow  |   5.2.0 | 
 
-- Create ```media``` directory in your file system
-- Set MEDIA_ROOT in cinewild/settings.py to your ```media`` directory
+- Create ```media``` and ```static``` directories in your file system
+- Set MEDIA_ROOT and STATIC_ROOT in cinewild/settings.py to your ```media``` and ```static``` directory
 
 # Running the project
 
