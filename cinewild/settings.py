@@ -26,7 +26,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = os.environ['DEBUG']
 
 ALLOWED_HOSTS = [
-    'cine-on-the-top.net'
+    'cine-on-the-top.net',
+    'http://cine-on-the-top.net',
 ]
 
 
