@@ -14,10 +14,10 @@ All your favorites movies in one app !
 
 - Create ```media``` and ```static``` directories in your file system
 - Create environnement variables : 
---- MEDIA=```media directory```
---- STATIC=```static directory```
---- DEBUG=True
---- SECRET_KEY='''your_secret_key'''
+  - MEDIA=```media directory```
+  - STATIC=```static directory```
+  - DEBUG=True
+  - SECRET_KEY='''your_secret_key'''
 
 # Running the project
 
