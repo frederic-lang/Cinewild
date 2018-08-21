@@ -13,7 +13,11 @@ All your favorites movies in one app !
 | Pillow  |   5.2.0 | 
 
 - Create ```media``` and ```static``` directories in your file system
-- Set MEDIA_ROOT and STATIC_ROOT in cinewild/settings.py to your ```media``` and ```static``` directory
+- Create environnement variables : 
+--- MEDIA=```media directory```
+--- STATIC=```static directory```
+--- DEBUG=True
+--- SECRET_KEY='''your_secret_key'''
 
 # Running the project
 
