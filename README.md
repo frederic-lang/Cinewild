@@ -21,10 +21,11 @@ All your favorites movies in one app !
 
 # Running the project
 
-In the directory manage.py, enter the commands :
+In the directory of manage.py, enter the commands :
 
-    $ python manage.py createsuperuser
     $ python manage.py migrate
+    $ python manage.py createsuperuser
+    $ python manage.py collectstatic
     $ python manage.py runserver
 
 After this last command, the project is running !
