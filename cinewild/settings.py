@@ -26,6 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = os.environ['DEBUG']
 
 ALLOWED_HOSTS = [
+    'cinewild.net',
     'cine-on-the-top.net',
     'http://cine-on-the-top.net',
 ]
@@ -123,6 +124,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.environ['STATIC']
+STATICFILES_DIRS = [ 
+    os.environ['BOOTSTRAP'],
+]
 
 MEDIA_ROOT = os.environ['MEDIA']
 MEDIA_URL = '/media/'
