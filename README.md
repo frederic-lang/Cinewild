@@ -16,6 +16,7 @@ All your favorites movies in one app !
 - Create environnement variables : 
   - MEDIA=```media directory```
   - STATIC=```static directory```
+  - BOOTSTRAP=```bootstrap directory
   - DEBUG=True
   - SECRET_KEY='''your_secret_key'''
 
