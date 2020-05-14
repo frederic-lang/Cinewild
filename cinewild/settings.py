@@ -127,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.environ['STATIC']
 STATICFILES_DIRS = [ 
-    os.environ['BOOTSTRAP'],
+    'staticfiles',
 ]
 
 MEDIA_ROOT = os.environ['MEDIA']
